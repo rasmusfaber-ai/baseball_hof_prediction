@@ -174,6 +174,23 @@ To make the model more useful as a **pre-screening tool**, the decision threshol
 
 The intended real-world use is thus **not** as the final arbiter, but as a **filter that reduces the pool** of players the committee needs to manually review, while retaining almost all ballot-worthy candidates.
 
+## Project Structure
+
+Current structure:
+
+```text
+.
+├── README.md
+├── ProjectReport.pdf
+├── requirements.txt
+├── .gitignore
+└── notebooks/
+    ├── EDA.ipynb          # Exploratory data analysis
+    └── ML.ipynb     # Feature engineering & PySpark ML pipeline
+```
+
+> Note: The implementation is currently notebook-based. All PySpark data processing and modeling code lives in the notebooks.
+
 ## Limitations
 
 - The model can only use **observable performance and career stats**; it cannot account for off-field issues (e.g. banning, scandals), which explains cases like **Pete Rose** (elite stats but never on a ballot).
